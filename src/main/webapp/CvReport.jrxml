@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.1.final using JasperReports Library version 6.20.1-7584acb244139816654f64e2fd57a00d3e31921e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="CvReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c1ff8c22-c3cf-45fa-9efc-857306892272">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer"/>
+	<field name="prenom" class="java.lang.String"/>
+	<field name="name" class="java.lang.String"/>
+	<field name="age" class="java.lang.Integer"/>
+	<field name="email" class="java.lang.String"/>
+	<field name="adresse" class="java.lang.String"/>
+	<field name="specialite" class="java.lang.String"/>
+	<field name="niveauetude" class="java.lang.String"/>
+	<field name="experiencepro" class="java.lang.String"/>
+	<variable name="age1" class="java.lang.Integer" calculation="First">
+		<variableExpression><![CDATA[$F{age}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="156" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="100" width="131" height="21" uuid="e753c969-516a-4ad9-8a81-3118040c75e6"/>
+				<textElement>
+					<font fontName="Serif" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Prenom:]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="450" y="40" width="100" height="20" uuid="d9959ebd-043b-45d9-a1d5-8d79300bb0a7"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="330" y="105" width="131" height="21" uuid="fb1272eb-d6b8-46f6-8fcc-20c9386e1f31"/>
+				<textElement>
+					<font fontName="Serif" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Email:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="80" y="110" width="100" height="30" uuid="76fc813f-69e4-4d82-815c-d505953bfc30"/>
+				<textFieldExpression><![CDATA[$F{prenom}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="411" y="109" width="100" height="30" uuid="54ec2108-152a-40c7-be43-c6fb8c64e236"/>
+				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="48" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="7" width="131" height="21" uuid="e43bd1a0-3c08-4f5c-926e-83350eab5224"/>
+				<textElement>
+					<font fontName="Serif" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nom:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="320" y="9" width="131" height="21" uuid="83020f70-3b30-4bff-9020-ea0b8bf84a0f"/>
+				<textElement>
+					<font fontName="Serif" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Adresse:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="80" y="7" width="100" height="30" uuid="a504f8bd-82dc-4351-a481-3ab1dc5db75d"/>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="414" y="14" width="100" height="30" uuid="969c9319-6c09-439b-889e-3a67cc0fa695"/>
+				<textFieldExpression><![CDATA[$F{adresse}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="45" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="10" width="131" height="21" uuid="ae638124-b61b-465b-95f4-048985faee2d"/>
+				<textElement>
+					<font fontName="Serif" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Age:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="84" y="15" width="100" height="30" uuid="50a593ad-b6e5-4175-9814-562b8538405c"/>
+				<textFieldExpression><![CDATA[$F{age}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="218" splitType="Stretch">
+			<rectangle>
+				<reportElement x="5" y="10" width="430" height="20" backcolor="#EAD8BE" uuid="bcb9a840-4fcc-43bd-8d03-a9d96c471f5c"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="170" y="10" width="130" height="20" forecolor="#FFFFFF" uuid="5e081ab9-8f52-47b4-a7d5-510a349ae78a"/>
+				<textElement>
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<text><![CDATA[specialite]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="5" y="50" width="430" height="20" backcolor="#EAD8BE" uuid="76525d81-e131-439d-bb98-194a765d43f9"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="170" y="50" width="130" height="20" forecolor="#FFFFFF" uuid="e613daae-9bc0-4699-9636-66c1b94bf0f2"/>
+				<textElement>
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<text><![CDATA[niveauetude]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="5" y="100" width="430" height="20" backcolor="#EAD8BE" uuid="4f2b96c6-f9f9-47e9-a816-5bf884c1d622"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineColor="#FFFFFF"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="131" y="100" width="169" height="20" forecolor="#FFFFFF" uuid="b1d290f1-57bd-4226-891a-c9d4f1b5ae18"/>
+				<textElement>
+					<font fontName="Arial" size="14"/>
+				</textElement>
+				<text><![CDATA[experiencepro]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="-20" y="190" width="595" height="10" backcolor="#EAD8BE" uuid="e93ecc76-ff6c-4e15-9976-8a1fd72dcb8f"/>
+			</rectangle>
+			<textField>
+				<reportElement x="115" y="35" width="100" height="30" uuid="f9019724-7281-44bf-8c24-af96b9bf4928">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="99246bf8-4528-4d66-bab1-ffb46ba83350"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{specialite}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="118" y="78" width="100" height="30" uuid="9c67a138-6a2d-42b4-8063-cdb4c3df112e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d6e10c06-52ed-4122-8133-e4b6be201231"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{niveauetude}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="117" y="124" width="100" height="30" uuid="bebba894-d5fb-45bb-a069-0e7e5a1ec0b0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="811737be-5142-41b4-9eac-c024ece98153"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{experiencepro}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
