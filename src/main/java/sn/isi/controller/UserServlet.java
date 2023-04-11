@@ -48,7 +48,7 @@ doGet(request, response);
 		if(action.equals("Enregistrer")) {
 			String login = request.getParameter("login");
 			String password = request.getParameter("password");
-			//response.sendRedirect("/examalickweb/src/main/webapp/VueCv.jsp");
+			
 			if (login.isEmpty()) {
 				
 				request.setAttribute("ERROR", "ERROR");

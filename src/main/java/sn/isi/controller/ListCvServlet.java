@@ -81,7 +81,7 @@ public class ListCvServlet extends HttpServlet {
 			
 	        
 			Cv c = new Cv();
-			//c.setUser(u);
+		
 			c.setName(name);
 			c.setPrenom(prenom);
 			c.setAge(ageint);

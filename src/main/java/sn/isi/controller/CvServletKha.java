@@ -50,7 +50,7 @@ public class CvServletKha extends HttpServlet {
         request.getRequestDispatcher("UserVue.jsp").forward(request, response);
         
 		
-		//response.getWriter().append("Served at: ").append(request.getContextPath());
+		
 	}
 
 	/**
@@ -83,7 +83,7 @@ public class CvServletKha extends HttpServlet {
 					request.getRequestDispatcher("VueCv.jsp").forward(request, response);	
 				}
 				Cv c = new Cv();
-				//c.setUser(u);
+				
 				c.setName(name);
 				c.setPrenom(prenom);
 				c.setAge(ageint);
